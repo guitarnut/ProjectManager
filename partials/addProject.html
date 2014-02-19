@@ -1,6 +1,6 @@
 <div>
     <app-header/>
-</div>
+</div><!-- Client selection -->
 <div class="row">
     <div class="col-md-12">
         <div class="form-group" ng-if="ready === false">
@@ -11,131 +11,195 @@
         </div>
 
     </div>
+</div><!-- Job fields -->
+<div ng-if="preview === false">
+    <div class="row" ng-if="ready === true">
+        <div class="col-md-12"><h4>New Job for {{client.name}}</h4></div>
+    </div>
+    <div ng-if="ready === true">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="jobNumber">Job Number</label>
+                    <input id="jobNumber" placeholder="Job Number" class="form-control" ng-model="job.number">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input id="jobTitle" placeholder="Job Title" class="form-control" ng-model="job.title">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="manager">Manager</label>
+                    <input id="manager" placeholder="Manager" class="form-control" ng-model="job.manager">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="designer">Designer</label>
+                    <input id="designer" placeholder="Designer" class="form-control" ng-model="job.designer">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="jobDescription">Description</label>
+                    <textarea id="jobDescription" rows="5" placeholder="Job Description" class="form-control" ng-model="job.description"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Assets -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="path">Assets Path:</label>
+                    <input id="path" placeholder="http://devreview/projects/{{jobEntity.get('data').id}}/" class="form-control" ng-model="assetPath.path" ng-init="assetPath.path = 'http://devreview/projects/'+jobEntity.get('data').id+'/'">
+                </div>
+                <div class="form-group">
+                    <label for="asset">Add Asset</label> <select id="asset" class="form-control" ng-model="asset">
+                    <option value="image">Image</option>
+                    <option value="link">Link</option>
+                    <option value="swf">SWF</option>
+                    <option value="video">Video</option>
+                    <option value="download" selected>Zipped Asset Download</option>
+                </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div ng-if="asset === 'download'">
+                    <div class="form-group">
+                        <label for="zip">Zip File</label>
+                        <input id="zip" placeholder="File" class="form-control" ng-model="download.file">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" placeholder="File" class="form-control" ng-model="download.name">
+                    </div>
+                </div>
+
+                <div ng-if="asset === 'link'">
+                    <div class="form-group">
+                        <label for="linkName">Name</label>
+                        <input id="linkName" placeholder="File" class="form-control" ng-model="link.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkDesc">Description</label>
+                        <input id="linkDesc" placeholder="File" class="form-control" ng-model="link.description">
+                    </div>
+                    <div class="form-group">
+                        <label for="link">HREF</label>
+                        <input id="link" placeholder="File" class="form-control" ng-model="link.href">
+                    </div>
+                </div>
+
+                <div ng-if="asset === 'swf'">
+                    <div class="form-group">
+                        <label for="swfName">Name</label>
+                        <input id="swfName" placeholder="File" class="form-control" ng-model="swf.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="swfFile">File</label>
+                        <input id="swfFile" placeholder="File" class="form-control" ng-model="swf.file">
+                    </div>
+                    <div class="form-group">
+                        <label for="swfHeight">Height</label>
+                        <input id="swfHeight" placeholder="File" class="form-control" ng-model="swf.height">
+                    </div>
+                    <div class="form-group">
+                        <label for="swfWidth">Width</label>
+                        <input id="swfWidth" placeholder="File" class="form-control" ng-model="swf.width">
+                    </div>
+                </div>
+
+                <div ng-if="asset === 'image'">
+                    <div class="form-group">
+                        <label for="imgName">Description</label>
+                        <input id="imgName" placeholder="File" class="form-control" ng-model="image.description">
+                    </div>
+                    <div class="form-group">
+                        <label for="imgFile">File</label>
+                        <input id="imgFile" placeholder="File" class="form-control" ng-model="image.file">
+                    </div>
+                    <div class="form-group">
+                        <label for="imgHeight">Height</label>
+                        <input id="imgHeight" placeholder="File" class="form-control" ng-model="image.height">
+                    </div>
+                    <div class="form-group">
+                        <label for="imgWidth">Width</label>
+                        <input id="imgWidth" placeholder="File" class="form-control" ng-model="image.width">
+                    </div>
+                </div>
+
+                <div ng-if="asset === 'video'">
+                    <p>Not available.</p>
+                </div>
+
+                <button class="btn btn-primary" ng-click="addAsset(asset)" ng-if="asset">Add Asset</button>
+
+            </div>
+            <div class="col-md-3">
+                <p><strong>Asset List</strong></p>
+                <ul>
+                    <li ng-repeat="asset in assets">{{asset}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div><!-- Options -->
+<div class="row" ng-if="(preview === false)&&(ready === true)">
+    <hr>
+    <div class="col-md-12">
+        <p align="center">
+            <button class="btn btn-primary" ng-click="reset()">Cancel</button>
+            <button class="btn btn-primary" ng-click="viewJob(true)">Preview Page</button>
+            <button class="btn btn-primary" ng-click="saveJob()">Save Job</button>
+        </p>
+    </div>
+</div><!-- Job preview -->
+<div class="row" ng-if="preview === true">
+    <div class="col-md-12">
+        <h4 align="center">{{job.number}} - {{job.title}}</h4>
+
+        <p align="center ng-if=" job.description">{{job.description}}</p>
+
+        <p align="center ng-if="(job.manager)&&(job.designer)">Manager: {{job.manager}}<br>Designer: {{job.designer}}</p>
+    </div>
+    <div class="col-md-12">
+        <hr>
+        <p align="center" ng-repeat="download in job.downloads">
+            <a href="{{download.file}}" target="_blank">
+                <button class="btn btn-primary">{{download.name}}</button>
+            </a>
+        </p>
+        <p align="center" ng-repeat="image in job.images">
+            {{image.description}}<br>
+            <img ng-src="{{image.file}}" alt="{{image.name}}" width="{{image.width}}" height="{{image.height}})" class="img-responsive">
+        </p>
+
+        <p align="center" ng-repeat="link in job.links">
+            {{image.description}}<br>
+            <img ng-src="{{image.file}}" alt="{{image.name}}" width="{{image.width}}" height="{{image.height}})" class="img-responsive">
+        </p>
+    </div>
+</div>
+<div class="row" ng-if="preview === true">
+    <hr>
+    <div class="col-md-12">
+        <p align="center">
+            <button class="btn btn-primary" ng-click="viewJob(false)">Close Preview</button>
+        </p>
+    </div>
 </div>
 <div class="row" ng-if="ready === true">
-    <div class="col-md-12"><h4>New Job for {{client.name}}</h4></div>
-</div>
-<div ng-if="ready === true">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="form-group">
-                <label for="jobNumber">Job Number</label>
-                <input id="jobNumber" placeholder="Job Number" class="form-control" ng-model="job.number">
-            </div>
-        </div>
-        <div class="col-md-5">
-            <div class="form-group">
-                <label for="jobTitle">Job Title</label>
-                <input id="jobTitle" placeholder="Job Title" class="form-control" ng-model="job.title">
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="form-group">
-                <label for="manager">Manager</label>
-                <input id="manager" placeholder="Manager" class="form-control" ng-model="job.manager">
-            </div>
-        </div>
-        <div class="col-md-2">
-            <div class="form-group">
-                <label for="designer">Designer</label>
-                <input id="designer" placeholder="Designer" class="form-control" ng-model="job.designer">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label for="jobDescription">Description</label>
-                <textarea id="jobDescription" rows="5" placeholder="Job Description" class="form-control" ng-model="job.description"></textarea>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="asset">Add Asset</label> <select id="asset" class="form-control" ng-model="asset">
-                <option selected>Select asset...</option>
-                <option value="image">Image</option>
-                <option value="link">Link</option>
-                <option value="swf">SWF</option>
-                <option value="video">Video</option>
-                <option value="download" selected>Zipped Asset Download</option>
-            </select>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div ng-if="asset === 'download'">
-                <div class="form-group">
-                    <label for="zip">Zip File Name</label> <input id="zip" placeholder="File" class="form-control" ng-model="download">
-                </div>
-            </div>
-
-            <div ng-if="asset === 'link'">
-                <div class="form-group">
-                    <label for="linkName">Name</label> <input id="linkName" placeholder="File" class="form-control" ng-model="link.name">
-                </div>
-                <div class="form-group">
-                    <label for="linkDesc">Description</label> <input id="linkDesc" placeholder="File" class="form-control" ng-model="link.description">
-                </div>
-                <div class="form-group">
-                    <label for="link">HREF</label> <input id="link" placeholder="File" class="form-control" ng-model="link.href">
-                </div>
-            </div>
-
-            <div ng-if="asset === 'swf'">
-                <div class="form-group">
-                    <label for="swfName">Name</label> <input id="swfName" placeholder="File" class="form-control" ng-modle="swf.name">
-                </div>
-                <div class="form-group">
-                    <label for="swfFile">File</label> <input id="swfFile" placeholder="File" class="form-control" ng-modle="swf.file">
-                </div>
-                <div class="form-group">
-                    <label for="swfHeight">Height</label> <input id="swfHeight" placeholder="File" class="form-control" ng-modle="swf.height">
-                </div>
-                <div class="form-group">
-                    <label for="swfWidth">Width</label> <input id="swfWidth" placeholder="File" class="form-control" ng-modle="swf.width">
-                </div>
-            </div>
-
-            <div ng-if="asset === 'image'">
-                <div class="form-group">
-                    <label for="imgName">Description</label> <input id="imgName" placeholder="File" class="form-control" ng-modle="image.imageDescription">
-                </div>
-                <div class="form-group">
-                    <label for="imgFile">File</label> <input id="imgFile" placeholder="File" class="form-control" ng-modle="image.imageName">
-                </div>
-                <div class="form-group">
-                    <label for="imgHeight">Height</label> <input id="imgHeight" placeholder="File" class="form-control" ng-modle="image.imageHeight">
-                </div>
-                <div class="form-group">
-                    <label for="imgWidth">Width</label> <input id="imgWidth" placeholder="File" class="form-control" ng-modle="image.imageWidth">
-                </div>
-            </div>
-
-            <div ng-if="asset === 'video'">
-                <p>Not available.</p>
-            </div>
-
-            <button class="btn btn-primary" ng-click="addAsset(asset)">Add Asset</button>
-
-        </div>
-        <div class="col-md-3">
-            <p>Assets Added:</p>
-            <ul>
-                <li ng-repeat="asset in assets">{{asset.name}}</li>
-            </ul>
-        </div>
-    </div>
     <hr>
-    <div class="row">
-        <div class="col-md-12">
-            <p align="center">
-                <button class="btn btn-primary">Cancel</button>
-                <button class="btn btn-primary">Preview Page</button>
-                <button class="btn btn-primary" ng-click="saveJob()">Save Job</button>
-            </p>
-        </div>
+    <div class="col-md-12"><p>Current jobs for {{client.name}}</p>
+        <ul>
+            <li ng-repeat="job in clientJobList.jobs track by $id($index)">{{job.number}} - {{job.title}} [<span ng-click="deleteJob(job.number)">DELETE</span>]
+            </li>
+        </ul>
     </div>
 </div>

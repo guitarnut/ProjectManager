@@ -1,10 +1,11 @@
-<div><app-header /></div>
-<p align="center"><button class="topcoat-button" ng-controller="ClientDataCtrl" ng-click="go('#/projects')">View All Projects</button></p>
-<div class="topcoat-list">
-  <h3 class="topcoat-list__header">Clients</h3>
-  <ul class="topcoat-list__container">
-    <li class="topcoat-list__item" ng-repeat="client in clientData.clients">
-     <client />
-    </li>
-  </ul>
+<div>
+    <app-header/>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h4 align="center">Clients</h4>
+        <p align="center" ng-repeat="client in clientList"><a href="#/clients/{{client.name}}">
+            <button class="btn btn-primary">{{client.name}}</button>
+        </a></p>
+    </div>
 </div>

@@ -1,43 +1,69 @@
-projectsApp.controller('ClientDataCtrl', function ClientDataCtrl($scope, $routeParams, $window, clientData) {
-	$scope.clientData;
-	$scope.job;
-	
-	//Pull JSON for a specific client or load the main client JSON doc if one is not specified
-	var clientId = $routeParams.clientId;
-	if (clientId === undefined) clientId = 'clients';
+'use strict';
 
-	//Get the job ID from the URL if it exists
-	var jobNumber = $routeParams.projectId;
+projectsApp.controller('ClientDataCtrl', function ClientDataCtrl($scope, $routeParams, $window, apigeeDataManager, dataStorage) {
 
-	//Load data with promise object
-	var Promise = clientData.getData(clientId);
+    //Sets the header image
+    $scope.clientData = {
+        header: 'starz.jpg'
+    }
 
-	Promise.then(function(result) {
-		$scope.clientData = result;
+    var clientId = $routeParams.clientId;
+    var projectId = $routeParams.projectId;
 
-		//If the job number has been specified, find it after the main client data is loaded
-		if (jobNumber != undefined) getJob(jobNumber);
-	}, function(result) {
-		//handle error
-	});
+    if (clientId === undefined) clientId = 'clients';
 
-	//Go through the jobs array in the JSON and find the correct one
-	function getJob(jobNumber) {
-		var job = $scope.clientData.clientJobs;
+    $scope.client = clientId;
+    $scope.clientList = {};
+    $scope.clientJobList = {
+        jobs: []
+    };
+    $scope.job = {};
 
-		for (var i = 0; i < job.length; i++) {
-			if (job[i].number === jobNumber) {
-				$scope.job = job[i];
-				break;
-			}
-		}
-	}
-	
-	$scope.go = function(path) {
-		$window.location.href = path;
-	};
-	
-	$scope.open = function(path) {
-		$window.open(path, '_blank');
-	}
+    function loadClients() {
+        apigeeDataManager.load('clients', clientsLoaded);
+    }
+
+    function clientsLoaded(d) {
+        $scope.$apply(function () {
+            for (var i = 0; i < d.length; i++) {
+                var obj = d[i].get('data');
+                $scope.clientList[obj.name] = obj;
+            }
+        })
+    }
+
+    function loadJobs() {
+        //This should happen up front and be stored in a singleton...
+        apigeeDataManager.load('jobs', jobsLoaded);
+    }
+
+    //Find the job object matching the selected client
+    function jobsLoaded(d) {
+        //Match the data to the client
+        for (var i = 0; i < d.length; i++) {
+            if (d[i].get('data')['name'] === clientId) {
+                //Store the current list of jobs in a separate object
+                $scope.clientJobList.jobs = d[i].get('data').clientJobs;
+            }
+        }
+
+        //If a job number is specified in the URL, we'll grab it now.
+        if (projectId != undefined) {
+            for (var j = 0; j < $scope.clientJobList.jobs.length; j++) {
+                if ($scope.clientJobList.jobs[j].number === projectId) {
+                    $scope.job = $scope.clientJobList.jobs[j];
+                }
+            }
+        }
+
+        $scope.$apply();
+    }
+
+    //If a client is specified in the URL, we'll load it's jobs.
+    //Otherwise, we load the client list.
+    if(clientId === 'clients') {
+        loadClients();
+    } else {
+        loadJobs();
+    }
 });

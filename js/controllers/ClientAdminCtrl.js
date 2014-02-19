@@ -1,6 +1,8 @@
 'use strict';
 
-projectsApp.controller('ClientAdminCtrl', ['$scope', '$log', 'apigeeDataManager', function ($scope, $log, apigeeDataManager) {
+projectsApp.controller('ClientAdminCtrl', ['$scope', '$route', 'apigeeDataManager', 'dataStorage', function ($scope, $route, apigeeDataManager, dataStorage) {
+
+    var clientName = '';
 
     $scope.clientData = {
         header: 'starz.jpg'
@@ -47,7 +49,8 @@ projectsApp.controller('ClientAdminCtrl', ['$scope', '$log', 'apigeeDataManager'
 
         //The ID, assets folder, and header image are all based off the client name.
         var lcName = String($scope.client.data.name).toLowerCase();
-        lcName.replace(/ /g, '');
+        //Remove spaces
+        lcName = lcName.replace(/\s/g,'');
 
         var c = {
             data: {
@@ -68,17 +71,40 @@ projectsApp.controller('ClientAdminCtrl', ['$scope', '$log', 'apigeeDataManager'
             $scope.client = {};
         });
         alert('Client saved');
+        $route.reload();
     }
 
     $scope.delete = function (id, name) {
-        //Delete record from database
+        clientName = name;
+
+        //Find the job list entity associated with this client
+        apigeeDataManager.load('jobs', deleteClientJobs);
+
+        //Delete client record from database
         apigeeDataManager.remove('client', id, deleteComplete);
 
+        //Remove the object from the scope
         delete $scope.clientList.name;
     }
 
+    function deleteClientJobs(d) {
+        //Match the data to the client
+        for (var i = 0; i < d.length; i++) {
+            if (d[i].get('data')['name'] === clientName) {
+                var Entity = d[i];
+                apigeeDataManager.remove('job', Entity.get('uuid'), clientDataDeleteComplete);
+
+            }
+        }
+    }
+
     function deleteComplete() {
-        alert('Deleted');
+        alert('Client deleted');
+        $route.reload();
+    }
+
+    function clientDataDeleteComplete() {
+        alert('Client data deleted');
     }
 
     loadClients();

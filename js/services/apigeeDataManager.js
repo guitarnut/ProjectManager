@@ -75,53 +75,15 @@ projectsApp.factory('apigeeDataManager', ['$rootScope', '$log', function ($rootS
             });
         },
         update: function (t, k, i, r, f) {
-            //message.show('updating');
 
-            //This function receives the type of record to delete, the key, the key's value, the object, and a callback
-            var c = new Apigee.Collection({ "client": $rootScope.client, "type": t });
-
-            //k not accessable within fetch method...
-            _k = k;
-
-            c.fetch(
-                function () {
-                    while (c.hasNextEntity()) {
-
-                        var d = c.getNextEntity();
-
-                        if (d.get(_k) === i) {
-                            //Must be a better way to do this...
-                            //Find each key and update differences between entity and new record
-                            for (var key in r) {
-                                if (d.get(key)) {
-                                    if (d.get(key) != r[key]) {
-                                        var k = String(key);
-                                        d.set(k, r[key]);
-                                        $log.info('updated ' + key);
-                                    }
-                                } else {
-                                    d.set(key, r[key]);
-                                }
-                            }
-
-                            d.save(function (e) {
-                                if (e) {
-                                    //Error
-                                } else {
-                                    //Callback function. We'll never pass a value to this function.
-                                    //message.hide(f);
-                                    f();
-                                }
-                            })
-
-                            return false;
-                        }
-                    }
-                },
-                function () {
-                    //Error
+            r.save(function(e) {
+                if(e) {
+                    //error
+                } else {
+                    //callback function
+                    f();
                 }
-            )
+            });
         }
     }
 }]);
