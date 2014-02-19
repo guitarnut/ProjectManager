@@ -26,7 +26,7 @@
       <file leaf-file-name="ProjectAdminCtrl.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/controllers/ProjectAdminCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="5" selection-start="187" selection-end="187" vertical-scroll-proportion="0.036466774" vertical-offset="0" max-vertical-offset="1234">
+            <state line="5" column="25" selection-start="214" selection-end="214" vertical-scroll-proportion="0.06077796" vertical-offset="0" max-vertical-offset="1234">
               <folding />
             </state>
           </provider>
@@ -36,15 +36,6 @@
         <entry file="file://$PROJECT_DIR$/partials/addProject.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="126" column="62" selection-start="5792" selection-end="5792" vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="2190">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blacksails.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/content/blacksails.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="20" selection-start="0" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="7725">
               <folding />
             </state>
           </provider>
@@ -136,6 +127,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -211,14 +216,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="133" y="54" width="1710" height="1352" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22781774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22781774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -264,13 +269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/blacksails.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="0" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="7725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/ProjectAdminCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="25" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1155">
@@ -281,13 +279,6 @@
     <entry file="file://$PROJECT_DIR$/partials/addProject.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="126" column="62" selection-start="5792" selection-end="5792" vertical-scroll-proportion="0.0" vertical-offset="1890" max-vertical-offset="2190">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/blacksails.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="0" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="7725">
           <folding />
         </state>
       </provider>
@@ -305,11 +296,6 @@
     <entry file="file://$PROJECT_DIR$/partials/client-detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="25" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1138" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/starzplay.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="15" selection-start="57" selection-end="70" vertical-scroll-proportion="0.04" vertical-offset="0" max-vertical-offset="1365" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/ClientDataCtrl.js">
@@ -377,11 +363,6 @@
         <state line="7" column="98" selection-start="259" selection-end="263" vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="495" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/comcast.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1209" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/services/apigeeDataManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="0" selection-start="2107" selection-end="2107" vertical-scroll-proportion="-14.846154" vertical-offset="784" max-vertical-offset="1980" />
@@ -414,13 +395,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/content/blacksails.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="20" selection-start="0" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="7725">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1234">
@@ -430,7 +404,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/ProjectAdminCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="187" selection-end="187" vertical-scroll-proportion="0.036466774" vertical-offset="0" max-vertical-offset="1234">
+        <state line="5" column="25" selection-start="214" selection-end="214" vertical-scroll-proportion="0.06077796" vertical-offset="0" max-vertical-offset="1234">
           <folding />
         </state>
       </provider>
