@@ -1,4 +1,1 @@
-assets/*.jpg
-assets/*.png
-assets/*.swf
-assets/*.zip
+/assets/*
