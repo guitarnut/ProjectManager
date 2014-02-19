@@ -1,0 +1,14 @@
+<div><app-header /></div>
+<p align="center"><button class="topcoat-button" ng-controller="ClientDataCtrl" ng-click="go('#/clients')">Back to Clients</button></p>
+<p align="center">Search projects:<br><input type="search" value="" placeholder="search" class="topcoat-search-input" ng-model="query"></p>
+<div class="topcoat-list">
+  <h3 class="topcoat-list__header">All Projects</h3>
+  <ul class="topcoat-list__container">
+  <div ng-repeat="clientData in jobList.jobs">
+  <h3 align="center"><strong>{{clientData.name}}</strong></h3>
+    <li class="topcoat-list__item rowHighlight" ng-repeat="job in clientData.clientJobs | filter:query">
+      <project-job />
+    </li>
+  </div>
+  </ul>
+</div>

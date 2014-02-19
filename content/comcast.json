@@ -1,0 +1,19 @@
+{
+	"id": "comcast",
+	"name": "Comcast",
+	"header": "comcast.jpg",
+	"imageFolder": "comcast/",
+	"clientJobs": [{
+		"number": "COM4601-14-A",
+		"title": "2014 CCC E-Newsletter February",
+		"description": "Pick up Job #Com4587-13-A Final and revise for February CCC –E-Newsletter. Please provide a PDF, HTML, and LINK.  The link must NOT have Comcast in them.",
+		"manager": "Sue",
+		"designer": "Rick",
+		"delivery": "",
+		"links": [{
+			"name": "Download PDF",
+			"description": "PDF review document.  Preview links will not work until new FLV files have been received.  See Aprimo for details.",
+			"href": "A_CCC_eNewsletter_Feb2014.pdf"
+		}]
+	}]
+}

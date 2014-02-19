@@ -1,0 +1,510 @@
+{
+	"id": "blacksails",
+	"name": "Black Sails",
+	"header": "bss1.jpg",
+	"imageFolder": "blacksails/",
+	"clientJobs": [{
+		"number": "ORG6379-13-AV",
+		"title": "BKS1 Character Quiz Social and .Com Assets",
+		"description": "See attached screengrab of our character quiz for how it should 'feel'. Also make sure this and job ORG6379-13-AU are aesthetically in line.<br><br>Social sizes: 1200 x 900; 1200 x 600<br>Social template: copyright, starz logo, hashtag<br>Extras on .com size: 249 x 332.",
+		"manager": "Alex",
+		"designer": "Rick",
+		"delivery": "quizAssets.zip",
+		"imageCollection": [{
+			"imageName": "quizAsset_377x196_Facebook.jpg",
+			"imageWidth": 377,
+			"imageHeight": 196,
+			"imageDescription": "Facebook Asset (377x196)"
+		}, {
+			"imageName": "quizAsset_extras_249x332.jpg",
+			"imageWidth": 249,
+			"imageHeight": 332,
+			"imageDescription": "Extras (249x332)"
+		}, {
+			"imageName": "quizAsset_twitter_1200x600.jpg",
+			"imageWidth": 1200,
+			"imageHeight": 600,
+			"imageDescription": "Twitter Social Template (1200x600)"
+		}, {
+			"imageName": "quizAsset_fb_1200x900.jpg",
+			"imageWidth": 1200,
+			"imageHeight": 900,
+			"imageDescription": "Facebook Social Template (1200x600)"
+		}]
+	}, {
+		"number": "ORG6521-13-Z",
+		"title": "BKS1 - Nation of Thieves 01.25.14",
+		"description": "Create a more editorial-themed newsletter for Black Sails.",
+		"manager": "Alex",
+		"designer": "Rick",
+		"delivery": "",
+		"imageCollection": [{
+			"imageName": "ORG6521-13-Z _newsletter.jpg",
+			"imageWidth": 580,
+			"imageHeight": 2040,
+			"imageDescription": "Newsletter"
+		}]
+	}, {
+		"number": "ORG6379-13-BF",
+		"title": "BKS1 GetGlue Page Assets Updated for In-Season",
+		"description": "Need GetGlue page assets from job ORG6766-13-A revised for in-season. GetGlue also now needs a 1200 x 892 asset as well to serve as the main image on their new app.",
+		"manager": "Alex",
+		"designer": "Rick",
+		"delivery": "BKS1_GetGlue_Assets.zip",
+		"imageCollection": [{
+			"imageName": "BKS1_GetGlue_Assets_1516x280.jpg",
+			"imageWidth": 1516,
+			"imageHeight": 280,
+			"imageDescription": "1516x280"
+		},{
+			"imageName": "BKS1_GetGlue_Assets_758x140.jpg",
+			"imageWidth": 758,
+			"imageHeight": 140,
+			"imageDescription": "758x140"
+		},{
+			"imageName": "BKS1_GetGlue_Assets_1200x892.jpg",
+			"imageWidth": 1200,
+			"imageHeight": 892,
+			"imageDescription": "GetGlue 1200x892"
+		}]
+	}, {
+		"number": "ORG6379-13-BG",
+		"title": "Pirate Life Essentials Assets",
+		"description": "Assets to promote our Pirate Life Essentials on PiratesWanted.com. Copy: Pirate Life Essentials<br><br>SOCIAL:<br>Sizes: 1200 x 627; 1200 x 600<br>Template: copyright, hashtag, starz logo<br><br>.COM:<br>Size: 249 x 332<br>No template. Leave room for text overlay, which will say Pirate Life Essentials (so no need to have it on the asset itself)",
+		"manager": "Alex",
+		"designer": "Rick",
+		"delivery": "pirateLifeAssets.zip",
+		"imageCollection": [{
+			"imageName": "pirateLife_249x332.jpg",
+			"imageWidth": 249,
+			"imageHeight": 332,
+			"imageDescription": "DotCom 249x332"
+		},{
+			"imageName": "pirateLife_1200x600.jpg",
+			"imageWidth": 1200,
+			"imageHeight": 600,
+			"imageDescription": "Social 1200x600"
+		},{
+			"imageName": "pirateLife_1200x627.jpg",
+			"imageWidth": 1200,
+			"imageHeight": 627,
+			"imageDescription": "Social 1200x627"
+		}]
+	}, {
+		"number": "ORG6379-13-BA",
+		"title": "BKS1 - GetGlue Stickers",
+		"description": "",
+		"manager": "Alex",
+		"designer": "Rick",
+		"delivery": "GetGlue_PSD.zip",
+		"imageCollection": []
+	},
+	{
+	    "number": "ORG6379-13-BH",
+	    "title": "BKS1 - Episode II. Captain Morgan Recipe",
+	    "description": "Captain Morgan recipe for Episode II. Michael Chuang is working on. Brief attached. Vanessa Louis is point for questions.",
+	    "manager": "Alex",
+	    "designer": "Rick",
+	    "delivery": "",
+	    "imageCollection": [
+	        {
+	            "imageName": "BKS1_CM_Recipe2_1200x900_final.jpg",
+	            "imageWidth": 1200,
+	            "imageHeight": 900,
+	            "imageDescription": "1200x900"
+	        }
+	    ]
+	},
+	{
+	    "number": "ORG6379-13-BI",
+	    "title": "BKS1 - 02.01 Postcard",
+	    "description": "Postcard promoting tune-in.  Copy: Tonight.",
+	    "manager": "Alex",
+	    "designer": "Rick",
+	    "delivery": "",
+	    "imageCollection": [
+	        {
+	            "imageName": "ORG6379-13-BI_1200x900.jpg",
+	            "imageWidth": 1200,
+	            "imageHeight": 900,
+	            "imageDescription": "1200x900"
+	        },
+	        {
+	            "imageName": "ORG6379-13-BI_1200x600.jpg",
+	            "imageWidth": 1200,
+	            "imageHeight": 600,
+	            "imageDescription": "1200x600"
+	        }
+	    ]
+	},
+	{
+    "number": "ORG6379-13-BJ",
+    "title": "BKS1 - 02.04 Postcard",
+    "description": "",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-BJ_1200x900_3.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        },{
+            "imageName": "ORG6379-13-BJ_twitter_1200x600_2.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        }
+    ]
+},
+{
+    "number": "ORG6379-13-BM",
+    "title": "BKS1 - 02.05 Postcard",
+    "description": "Screenshot from artwork scene with copy: Fruit...fruit. Tits...tits. Plant...plant",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-BM_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        },{
+            "imageName": "ORG6379-13-BM_twitter_1200x600.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        }
+    ]
+},
+{
+    "number": "ORG6379-13-BL",
+    "title": "BKS1 - Mid-Season Marathon Assets",
+    "description": "To promote the mid-season 'marathon' of episode I - III on social.Make an asset that uses system images of the three first episodes to promote the marathon of episode I, II, and III. The White Queen's asset is attached for reference - something similar to that is fine.",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-BL_851x315.jpg",
+            "imageWidth": 851,
+            "imageHeight": 315,
+            "imageDescription": "Cover Image for Facebook (851x315)"
+        },{
+            "imageName": "ORG6379-13-BL_CoverPhoto.jpg",
+            "imageWidth": 1114,
+            "imageHeight": 1127,
+            "imageDescription": "Facebook Mockup"
+        },{
+            "imageName": "ORG6379-13-BL_twitter_1200x600.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        },{
+            "imageName": "ORG6379-13-BL_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }
+    ]
+},{
+    "number": "ORG6379-13-BN",
+    "title": "Episode III. Captain Morgan Recipe",
+    "description": "",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "BKS1_CM_Recipe3_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }
+    ]
+},{
+    "number": "ORG6379-13-BO",
+    "title": "Episode IV. Captain Morgan Recipe",
+    "description": "",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "BKS1_CM_Recipe4_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }
+    ]
+},{
+    "number": "ORG6379-13-BP",
+    "title": "Episode V. Captain Morgan Recipe",
+    "description": "",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "BKS1_CM_Recipe5_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }
+    ]
+},{
+    "number": "ORG6991-14-A",
+    "title": "BKS1 - Luke Arnold Twitter Chat Assets",
+    "description": "Pulling images listed below, create assets that will be used for pre-chat invites including the date, time, handles and hastags, as well as Starz TYP Logo and disclaimer that will be used to introduce Luke at the start of the chat as well as an image to close the chat. Sizes of each asset should be provided in 600x600 pixels (with no more than 20% of the image being text), 851 x 315 pixels, 120x900 & 1200x600.<br>Image No. 1 BKS1_042013_944<br>Image No. 2 BKS1_042013_8967<br>Image No. 3 BKS1_103_012113_1477",
+    "manager": "Keyonna",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6991-14-A_twitter_1200x600_1.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        },{
+            "imageName": "ORG6991-14-A_twitter_1200x600_2.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        },{
+            "imageName": "ORG6991-14-A_twitter_1200x600_3.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        },{
+            "imageName": "ORG6991-14-A_1200x900_1.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        },{
+            "imageName": "ORG6991-14-A_1200x900_2.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        },{
+            "imageName": "ORG6991-14-A_1200x900_3.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        },{
+            "imageName": "ORG6991-14-A_851x315_1.jpg",
+            "imageWidth": 851,
+            "imageHeight": 315,
+            "imageDescription": "851x315"
+        },{
+            "imageName": "ORG6991-14-A_851x315_2.jpg",
+            "imageWidth": 851,
+            "imageHeight": 315,
+            "imageDescription": "851x315"
+        },{
+            "imageName": "ORG6991-14-A_851x315_3.jpg",
+            "imageWidth": 851,
+            "imageHeight": 315,
+            "imageDescription": "851x315"
+        },{
+            "imageName": "ORG6991-14-A_600x600_grid.jpg",
+            "imageWidth": 600,
+            "imageHeight": 600,
+            "imageDescription": "Facebook 20% grid coverage"
+        },{
+            "imageName": "ORG6991-14-A_600x600_1.jpg",
+            "imageWidth": 600,
+            "imageHeight": 600,
+            "imageDescription": "600x600"
+        },{
+            "imageName": "ORG6991-14-A_600x600_2.jpg",
+            "imageWidth": 600,
+            "imageHeight": 600,
+            "imageDescription": "600x600"
+        },{
+            "imageName": "ORG6991-14-A_600x600_3.jpg",
+            "imageWidth": 600,
+            "imageHeight": 600,
+            "imageDescription": "600x600"
+        }
+    ]
+},
+{
+    "number": "ORG6379-13-BV",
+    "title": "BKS1 - 02.08 Postcard",
+    "description": "Image of Eleanor and Flint with copy: Tonight",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-BV_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }, {
+            "imageName": "ORG6379-13-BV_twitter_1200x600.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        }
+    ]
+},
+{
+    "number": "ORG6379-13-CA",
+    "title": "BKS1 - 02.25 Postcard",
+    "description": "Image of Billy with copy: Men are going to die today attacking that ship out there",
+    "manager": "Alex",
+    "designer": "Hyung",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-CA_BKS1-2-25_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }, {
+            "imageName": "ORG6379-13-CA_BKS1-2-25_1200x600.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        }
+    ]
+},
+{
+    "number": "ORG6379-13-BX",
+    "title": "BKS1 - 02.14 Postcard",
+    "description": "Postcard of Anne Bonny with copy: The lovely Anne Bonny will cut your heart out.",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-BX_1200x900_opt1.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        },{
+            "imageName": "ORG6379-13-BX_1200x900_opt2.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900 v2"
+        }, {
+            "imageName": "ORG6379-13-BX_twitter_1200x600_opt1.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        }, {
+            "imageName": "ORG6379-13-BX_twitter_1200x600_opt2.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600 v2"
+        }
+    ]
+},{
+    "number": "ORG6379-13-BZ",
+    "title": "BKS1 - 02.18 Postcard",
+    "description": "Postcard of Rackham with quote: 'One week without a ship and you go completely to hell.' -Rackham",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-BZ_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }, {
+            "imageName": "ORG6379-13-BZ_twitter_1200x600.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        }
+    ]
+},
+{
+    "number": "ORG6323-13-AI",
+    "title": "BKS1 - Mid-Season Marathon Assets",
+    "description": "To promote the mid-season 'marathon' of episode I - III on .com.",
+    "manager": "Alex",
+    "designer": "Rick",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6323-13-AI_320x340.jpg",
+            "imageWidth": 320,
+            "imageHeight": 340,
+            "imageDescription": "320x340"
+        },{
+            "imageName": "ORG6323-13-AI_1025x651.jpg",
+            "imageWidth": 1025,
+            "imageHeight": 651,
+            "imageDescription": "1025x651"
+        },{
+            "imageName": "ORG6323-13-AI_1440x651.jpg",
+            "imageWidth": 1440,
+            "imageHeight": 651,
+            "imageDescription": "1440x651"
+        }
+    ]
+},
+{
+    "number": "ORG6323-13-BY",
+    "title": "BKS1 - Postcard",
+    "description": "Mr. Scott with copy: Tonight",
+    "manager": "Alex",
+    "designer": "Hyung",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-BY_BKS1-2-15_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }, {
+            "imageName": "ORG6379-13-BY_BKS1-2-15_1200x600.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        }
+    ]
+},
+{
+    "number": "ORG6379-13-BW",
+    "title": "BKS1 - Postcard",
+    "description": "Eleanor with copy: We made you into the man you insisted to them that you were",
+    "manager": "Alex",
+    "designer": "Hyung",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6379-13-BW_BKS1-2-11_1200x900.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 900,
+            "imageDescription": "1200x900"
+        }, {
+            "imageName": "ORG6379-13-BW_BKS1-2-11_1200x600.jpg",
+            "imageWidth": 1200,
+            "imageHeight": 600,
+            "imageDescription": "1200x600"
+        }
+    ]
+},
+{
+    "number": "ORG6521-13-Feb22",
+    "title": "BKS1 - Newsletter Feb 22",
+    "description": "",
+    "manager": "Alex",
+    "designer": "Hyung",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "ORG6521-13–Feb22.jpg",
+            "imageWidth": 580,
+            "imageHeight": 2340,
+            "imageDescription": "580x2340"
+        }
+    ]
+}]
+}

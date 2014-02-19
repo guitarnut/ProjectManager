@@ -1,0 +1,11 @@
+<div><app-header /></div>
+<p align="center"><button class="topcoat-button" ng-controller="ClientDataCtrl" ng-click="go('#/clients')">Back to Clients</button></p>
+<p align="center">Search projects:<br><input type="search" value="" placeholder="search" class="topcoat-search-input" ng-model="query"></p>
+<div class="topcoat-list">
+  <h3 class="topcoat-list__header">Projects for {{clientData.name}}</h3>
+  <ul class="topcoat-list__container">
+    <li class="topcoat-list__item" ng-repeat="job in clientData.clientJobs | filter:query">
+      <project-job />
+    </li>
+  </ul>
+</div>

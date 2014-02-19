@@ -1,0 +1,28 @@
+<div>
+    <app-header/>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="clientName">Client Name</label>
+            <input id="clientName" placeholder="Client" class="form-control" ng-model="client.data.name">
+        </div>
+        <div class="form-group">
+            <label for="clientType">Client Type</label>
+            <select id="clientType" class="form-control" ng-model="client.data.type">
+                <option value="Original" selected>Original</option>
+                <option value="Affiliate">Affiliate</option>
+                <option value="STARZ Product">STARZ Product</option>
+                <option value="ENCORE Product">ENCORE Product</option>
+                <option value="POS">POS</option>
+                <option value="Campaign">Campaign</option>
+                <option value="Misc">Misc</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" ng-click="saveClient()">Save Client</button>
+    </div>
+    <div class="col-md-4"><p>Current Clients</p>
+
+        <p ng-repeat="client in clientList">{{client.name}} (<span ng-click="delete(client.uuid, client.name)">Delete</span>)
+        </p></div>
+</div>

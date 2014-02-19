@@ -1,0 +1,53 @@
+/* FULL */
+{
+    "number": "",
+    "title": "",
+    "description": "",
+    "manager": "",
+    "designer": "",
+    "delivery": "",
+    "fontColor":"#FFF",
+    "bgColor":"#000",
+    "swf": [
+    	{
+    		"name":"",
+        	"file":"",
+        	"height":0,
+        	"width":0
+    	}
+    ],
+    "links": [
+    	{
+    		"name":"",
+    		"description":"",
+			"href":""
+		}
+    ],
+    "imageCollection": [
+        {
+            "imageName": "",
+            "imageWidth": 0,
+            "imageHeight": 0,
+            "imageDescription": ""
+        }
+    ]
+}
+
+/* MINIMAL */
+
+{
+    "number": "",
+    "title": "",
+    "description": "",
+    "manager": "",
+    "designer": "",
+    "delivery": "",
+    "imageCollection": [
+        {
+            "imageName": "",
+            "imageWidth": 0,
+            "imageHeight": 0,
+            "imageDescription": ""
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+<div><app-header /></div>
+<div class="topcoat-list">
+  <ul class="topcoat-list__container" ng-style="{color: job.fontColor, background: job.bgColor}">
+    <li class="topcoat-list__item">
+      <project-details />
+    </li>
+    <li class="topcoat-list__item noData" ng-class="{hasData: job.delivery}">
+    <project-download /> 
+    
+    </li>
+    <li class="topcoat-list__item" ng-repeat="flash in job.swf">
+    <project-flash />
+    </li>
+    <li class="topcoat-list__item" ng-repeat="link in job.links">
+    <project-link />
+    </li>
+    <li class="topcoat-list__item" ng-repeat="image in job.imageCollection">
+      <project-image />
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

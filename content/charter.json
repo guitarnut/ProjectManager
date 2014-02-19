@@ -1,0 +1,51 @@
+{
+	"id": "charter",
+	"name": "Charter",
+	"header": "charter.jpg",
+	"imageFolder": "charter/",
+	"clientJobs": [{
+		"number": "CHT4221-14-A",
+		"title": "2014 CHT charter.com banner Starz 1Q",
+		"description": "Please pick up CHT4190-13-A and update with imagery for Black Sails, Iron Man 3 and Monsters University.",
+		"manager": "Cynde",
+		"designer": "Rick",
+		"delivery": "",
+		"imageCollection": [{
+			"imageName": "CHT4221-14-A.jpg",
+			"imageWidth": 960,
+			"imageHeight": 100,
+			"imageDescription": "960x100"
+		}]
+	}, {
+		"number": "CHT4221-14-B",
+		"title": "2014 CHT charter.com Encore banners 1Q",
+		"description": "Please pick up CHT4190-13-B and update with imagery for The Amazing Spider-Man, 50 First Dates and The Incredibles.",
+		"manager": "Cynde",
+		"designer": "Rick",
+		"delivery": "",
+		"imageCollection": [{
+			"imageName": "CHT4221-14-B.jpg",
+			"imageWidth": 960,
+			"imageHeight": 100,
+			"imageDescription": "960x100"
+		}]
+	}, {
+		"number": "CHT4221-14-C",
+		"title": "2014 CHT Web Banner Phone # version 1Q",
+		"description": "Please pick up CHT4221-13-A and B and update the copy 'Order Encore today' and 'Order Starz today' with: Call to Order 877-694-9474",
+		"manager": "Cynde",
+		"designer": "Rick",
+		"delivery": "",
+		"imageCollection": [{
+			"imageName": "CHT4221-14-C_Starz.jpg",
+			"imageWidth": 960,
+			"imageHeight": 100,
+			"imageDescription": "960x100"
+		},{
+			"imageName": "CHT4221-14-C_Encore.jpg",
+			"imageWidth": 960,
+			"imageHeight": 100,
+			"imageDescription": "960x100"
+		}]
+	}]
+}

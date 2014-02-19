@@ -1,0 +1,38 @@
+{
+	"id": "verizon",
+	"name": "Verizon",
+	"header": "verizon.jpg",
+	"imageFolder": "verizon/",
+	"clientJobs": [{
+		"number": "VER4322-14-A",
+		"title": "Verizon starz banner Q1 2014 update",
+		"description": "760 x 140<br>Would like to include both the starz and verizon logo<br>This will be a static banner",
+		"manager": "Brooke",
+		"designer": "Rick",
+		"delivery": "",
+		"imageCollection": [
+        {
+            "imageName": "VER4322-14-A_760x140.jpg",
+            "imageWidth": 760,
+            "imageHeight": 140,
+            "imageDescription": "760x140 Static"
+        }
+    ]
+	},
+	{
+		"number": "VER4322-14-B",
+		"title": "Verizon Starzplay banner Q1 2014 update",
+		"description": "Add the verizon logo. 710 wide x any.",
+		"manager": "Brooke",
+		"designer": "Rick",
+		"delivery": "",
+		"imageCollection": [
+        {
+            "imageName": "VER4322-14-B_710x250.jpg",
+            "imageWidth": 710,
+            "imageHeight": 250,
+            "imageDescription": "710x250 Static"
+        }
+    ]
+	}]
+}
