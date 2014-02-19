@@ -54,10 +54,10 @@
         </div>
         <!-- Assets -->
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label for="path">Assets Path:</label>
-                    <input id="path" placeholder="http://devreview/projects/{{jobEntity.get('data').id}}/" class="form-control" ng-model="assetPath.path" ng-init="assetPath.path = 'http://devreview/projects/'+jobEntity.get('data').id+'/'">
+                    <input id="path" placeholder="http://devreview/projects/{{jobEntity.get('data').id}}/" class="form-control" ng-model="assetPath.path" ng-init="assetPath.path = 'http://devreview/projects/assets/'+jobEntity.get('data').id+'/'">
                 </div>
                 <div class="form-group">
                     <label for="asset">Add Asset</label> <select id="asset" class="form-control" ng-model="asset">
@@ -141,11 +141,9 @@
                 <button class="btn btn-primary" ng-click="addAsset(asset)" ng-if="asset">Add Asset</button>
 
             </div>
-            <div class="col-md-3">
+            <div class="col-md-5">
                 <p><strong>Asset List</strong></p>
-                <ul>
-                    <li ng-repeat="asset in assets">{{asset}}</li>
-                </ul>
+                <p><span ng-repeat="asset in assets">{{asset}} [<span ng-click="deleteAsset(asset)">DELETE</span>]<br></span></p>
             </div>
         </div>
     </div>

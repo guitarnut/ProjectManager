@@ -1,6 +1,8 @@
 projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManager', 'dataStorage', function ($scope, $route, apigeeDataManager, dataStorage) {
     //ISSUES:
 
+    var deleteThis;
+
     //Sets the header image
     $scope.clientData = {
         header: 'starz.jpg'
@@ -111,10 +113,10 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
             case 'image':
                 //Append the base path to the image
                 $scope.image.file = $scope.assetPath.path + $scope.image.file;
-                //Add the asset to the job
-                $scope.job.images.push($scope.image);
                 //Add the asset to the UI asset list
                 $scope.assets[$scope.image.file] = $scope.image.file;
+                //Add the asset to the job
+                $scope.job.images.push($scope.image);
                 //Reset the object's values
                 $scope.image = {};
                 break;
@@ -127,6 +129,24 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
                 $scope.download = {};
                 break;
         }
+    }
+
+    $scope.deleteAsset = function (a) {
+        //Remove it from the scope
+        delete $scope.assets[a];
+
+        deleteThis = a;
+
+        //Find a better way to do this... searching each array for the filename
+        $scope.job.images = $scope.job.images.filter(removeAsset);
+        $scope.job.links = $scope.job.links.filter(removeAsset);
+        $scope.job.videos = $scope.job.videos.filter(removeAsset);
+        $scope.job.swfs = $scope.job.swfs.filter(removeAsset);
+        $scope.job.downloads = $scope.job.downloads.filter(removeAsset);
+    }
+
+    function removeAsset(element, index, array) {
+        return (element.file != deleteThis);
     }
 
     $scope.viewJob = function (p) {
