@@ -3,7 +3,7 @@
 </div><!-- Client selection -->
 <div class="row">
     <div class="col-md-12">
-        <h4>Manage Projects</h4>
+        <h2>Manage Projects</h2>
     </div>
 </div>
 <div class="row" ng-if="ready === false">
@@ -70,10 +70,12 @@
                 </div>
                 <div class="form-group">
                     <label for="asset">Add Asset</label> <select id="asset" class="form-control" ng-model="asset">
-                    <option value="image">Image</option>
+                    <option value="image" selected>Image</option>
                     <option value="link">Link</option>
-                    <option value="swf">SWF</option>
-                    <option value="download" selected>Zipped Asset Download</option>
+                    <option value="download">Download</option>
+                    <option value="" disabled>SWF</option>
+                    <option value="" disabled>Video</option>
+                    <option value="" disabled>iFrame</option>
                 </select>
                 </div>
             </div>
