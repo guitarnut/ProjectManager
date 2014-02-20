@@ -1,12 +1,21 @@
 <div>
     <app-header/>
 </div>
+
 <div class="row">
     <div class="col-md-8">
+        <h4>Manage Clients</h4>
+
+        <p>The following steps must be taken when adding a new client:</p>
+        <ul>
+            <li>Create an asset folder in 'devreview/projects/assets/' for this client's assets</li>
+            <li>Create a header image for this client in 'devreview/projects/content/headers/'</li>
+        </ul>
         <div class="form-group">
             <label for="clientName">Client Name</label>
             <input id="clientName" placeholder="Client" class="form-control" ng-model="client.data.name">
         </div>
+
         <div class="form-group">
             <label for="clientType">Client Type</label>
             <select id="clientType" class="form-control" ng-model="client.data.type">
@@ -19,10 +28,20 @@
                 <option value="Misc">Misc</option>
             </select>
         </div>
+        <div class="form-group">
+            <label for="headerImage">Header Image Filename</label>
+            <input id="headerImage" placeholder="Client" class="form-control" ng-model="client.data.header">
+        </div>
+        <div class="form-group">
+            <label for="assetFolder">Asset Folder Name</label>
+            <input id="assetFolder" placeholder="Client" class="form-control" ng-model="client.data.imageFolder">
+        </div>
         <button class="btn btn-primary" ng-click="saveClient()">Save Client</button>
     </div>
-    <div class="col-md-4"><p>Current Clients</p>
+    <div class="col-md-4"><h4>Current Clients</h4>
 
-        <p ng-repeat="client in clientList">{{client.name}} (<span ng-click="delete(client.uuid, client.name)">Delete</span>)
-        </p></div>
-</div>
+        <div ng-repeat="client in clientList" class="well well-small">
+            <button class="btn btn-small btn-danger pull-right" ng-click="delete(client.uuid, client.name)">Delete</button>
+            <h5>{{client.name}}</h5>
+        </div>
+    </div>

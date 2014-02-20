@@ -1,6 +1,6 @@
 'use strict';
 
-projectsApp.controller('ClientAdminCtrl', ['$scope', '$route', 'apigeeDataManager', 'dataStorage', function ($scope, $route, apigeeDataManager, dataStorage) {
+projectsApp.controller('ClientAdminCtrl', ['$scope', '$route', 'apigeeDataManager', 'dataStorage', '$log', function ($scope, $route, apigeeDataManager, dataStorage, log) {
 
     var clientName = '';
 
@@ -48,16 +48,16 @@ projectsApp.controller('ClientAdminCtrl', ['$scope', '$route', 'apigeeDataManage
     function createClientJoblist() {
 
         //The ID, assets folder, and header image are all based off the client name.
-        var lcName = String($scope.client.data.name).toLowerCase();
+        var id = String($scope.client.data.name).toLowerCase();
         //Remove spaces
-        lcName = lcName.replace(/\s/g,'');
+        id = id.replace(/\s/g,'');
 
         var c = {
             data: {
-                id: lcName,
+                id: id,
                 name: $scope.client.data.name,
-                header: lcName + '.jpg',
-                imageFolder: lcName + '/',
+                header: $scope.client.data.header,
+                imageFolder: $scope.client.data.imageFolder + '/',
                 clientJobs: []
             }
         };
@@ -75,16 +75,22 @@ projectsApp.controller('ClientAdminCtrl', ['$scope', '$route', 'apigeeDataManage
     }
 
     $scope.delete = function (id, name) {
-        clientName = name;
+        var c = confirm('Are you sure? This cannot be undone.');
 
+        if(c) {
+            clientName = name;
+
+            //Delete client record from database
+            apigeeDataManager.remove('client', id, deleteClientComplete);
+
+            //Remove the object from the scope
+            delete $scope.clientList.name;
+        }
+    }
+
+    function deleteClientComplete() {
         //Find the job list entity associated with this client
         apigeeDataManager.load('jobs', deleteClientJobs);
-
-        //Delete client record from database
-        apigeeDataManager.remove('client', id, deleteComplete);
-
-        //Remove the object from the scope
-        delete $scope.clientList.name;
     }
 
     function deleteClientJobs(d) {
@@ -98,13 +104,9 @@ projectsApp.controller('ClientAdminCtrl', ['$scope', '$route', 'apigeeDataManage
         }
     }
 
-    function deleteComplete() {
+    function clientDataDeleteComplete() {
         alert('Client deleted');
         $route.reload();
-    }
-
-    function clientDataDeleteComplete() {
-        alert('Client data deleted');
     }
 
     loadClients();

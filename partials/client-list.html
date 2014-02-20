@@ -4,8 +4,12 @@
 <div class="row">
     <div class="col-md-12">
         <h4 align="center">Clients</h4>
-        <p align="center" ng-repeat="client in clientList"><a href="#/clients/{{client.name}}">
-            <button class="btn btn-primary">{{client.name}}</button>
-        </a></p>
+
+        <div class="well" ng-repeat="client in clientList">
+
+            <a href="#/clients/{{client.name}}"><button class="btn btn-primary pull-right">View Projects</button></a>
+            <h5>{{client.name}}</h5>
+        </div>
+
     </div>
 </div>

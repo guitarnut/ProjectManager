@@ -3,8 +3,10 @@
 </div><!-- Client selection -->
 <div class="row">
     <div class="col-md-12">
+        <h4>Manage Projects</h4>
+
         <div class="form-group" ng-if="ready === false">
-            <label for="client">Client</label>
+            <label for="client">Select client</label>
             <select id="client" ng-change="loadClient()" ng-model="client.name" class="form-control">
                 <option ng-repeat="client in clientList" value="{{client.name}}" ng-blur="loadClient()">{{client.name}}</option>
             </select> <a href="#/addclient">Add Client</a>
@@ -14,7 +16,7 @@
 </div><!-- Job fields -->
 <div ng-if="preview === false">
     <div class="row" ng-if="ready === true">
-        <div class="col-md-12"><h4>New Job for {{client.name}}</h4></div>
+        <div class="col-md-12"><h5>Create Job for {{client.name}}</h5></div>
     </div>
     <div ng-if="ready === true">
         <div class="row">
@@ -64,7 +66,6 @@
                     <option value="image">Image</option>
                     <option value="link">Link</option>
                     <option value="swf">SWF</option>
-                    <option value="video">Video</option>
                     <option value="download" selected>Zipped Asset Download</option>
                 </select>
                 </div>
@@ -83,7 +84,7 @@
 
                 <div ng-if="asset === 'link'">
                     <div class="form-group">
-                        <label for="linkName">Name</label>
+                        <label for="linkName">Display Text</label>
                         <input id="linkName" placeholder="File" class="form-control" ng-model="link.name">
                     </div>
                     <div class="form-group">
@@ -143,7 +144,14 @@
             </div>
             <div class="col-md-5">
                 <p><strong>Asset List</strong></p>
-                <p><span ng-repeat="asset in assets">{{asset}} [<span ng-click="deleteAsset(asset)">DELETE</span>]<br></span></p>
+
+                <div class="well well-small" ng-repeat="asset in assets">
+                    <p>
+                        <button class="btn btn-xs btn-danger" ng-click="deleteAsset(asset)">DELETE</button>
+                        <small>{{asset}}</small>
+                    </p>
+
+                </div>
             </div>
         </div>
     </div>
@@ -167,21 +175,13 @@
         <p align="center ng-if="(job.manager)&&(job.designer)">Manager: {{job.manager}}<br>Designer: {{job.designer}}</p>
     </div>
     <div class="col-md-12">
-        <hr>
-        <p align="center" ng-repeat="download in job.downloads">
-            <a href="{{download.file}}" target="_blank">
-                <button class="btn btn-primary">{{download.name}}</button>
-            </a>
-        </p>
-        <p align="center" ng-repeat="image in job.images">
-            {{image.description}}<br>
-            <img ng-src="{{image.file}}" alt="{{image.name}}" width="{{image.width}}" height="{{image.height}})" class="img-responsive">
-        </p>
 
-        <p align="center" ng-repeat="link in job.links">
-            {{image.description}}<br>
-            <img ng-src="{{image.file}}" alt="{{image.name}}" width="{{image.width}}" height="{{image.height}})" class="img-responsive">
-        </p>
+        <project-download ng-repeat="download in job.downloads" download="download"></project-download>
+
+        <project-image ng-repeat="image in job.images" image="image"></project-image>
+
+        <project-link ng-repeat="link in job.links" link="link"></project-link>
+
     </div>
 </div>
 <div class="row" ng-if="preview === true">
@@ -194,10 +194,14 @@
 </div>
 <div class="row" ng-if="ready === true">
     <hr>
-    <div class="col-md-12"><p>Current jobs for {{client.name}}</p>
-        <ul>
-            <li ng-repeat="job in clientJobList.jobs track by $id($index)">{{job.number}} - {{job.title}} [<span ng-click="deleteJob(job.number)">DELETE</span>]
-            </li>
-        </ul>
+    <div class="col-md-12"><h5>Current jobs for {{client.name}}</h5></div>
+    <div class="col-md-4" ng-repeat="job in clientJobList.jobs track by $id($index)">
+        <div class="well well-small">
+            <p>
+                <button class="btn btn-xs btn-danger" ng-click="deleteJob(job.number)">DELETE</button>
+                <small>{{job.number}} - {{job.title}}</small>
+            </p>
+        </div>
     </div>
+
 </div>

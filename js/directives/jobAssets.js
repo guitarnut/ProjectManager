@@ -34,7 +34,10 @@ projectsApp.directive('projectDownload', function() {
 	return {
 		restrict: 'E',
 		templateUrl: 'lib/templates/projectDownload.html',
-		replace: true
+		replace: true,
+        scope: {
+            download: '=download'
+        }
 	}
 });
 
@@ -42,7 +45,10 @@ projectsApp.directive('projectImage', function() {
 	return {
 		restrict: 'E',
 		templateUrl: 'lib/templates/projectImage.html',
-		replace: true
+		replace: true,
+        scope: {
+            image: '=image'
+        }
 	}
 });
 
@@ -50,7 +56,10 @@ projectsApp.directive('projectLink', function() {
 	return {
 		restrict: 'E',
 		templateUrl: 'lib/templates/projectLink.html',
-		replace: true
+		replace: true,
+        scope: {
+            link: '=link'
+        }
 	}
 });
 

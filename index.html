@@ -66,9 +66,24 @@
 <body>
 <div id="browser"><p align="center">
     <strong>Internet Explorer detected. For the best experience, use IE9 or newer.</strong></p></div>
-<div class="container" ng-view=""></div>
 
-<div><p>Footer</p></div>
+<ul class="nav nav-tabs">
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#/clients"> Clients <span class="caret"></span> </a>
+        <ul class="dropdown-menu" ng-controller="ClientDataCtrl" ng-cloak>
+            <li ng-repeat="client in clientList"><a href="#/clients/{{client.name}}">{{client.name}}</a></li>
+        </ul>
+    </li>
+    <li>Projects</li>
+    <li><a href="#/addclient">Edit Clients</a></li>
+    <li><a href="#/addproject">Edit Projects</a></li>
+</ul>
+
+
+<div class="container" ng-view=""></div>
+<div class="container">
+    <div class="col-md-12" style="margin-top: 30px;"><p align="center"><strong>STARZ Project Admin</strong></p></div>
+</div>
 
 <script src="js/app.js"></script>
 <script src="js/services/clientData.js"></script>

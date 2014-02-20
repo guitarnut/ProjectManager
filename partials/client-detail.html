@@ -4,7 +4,14 @@
 <div class="row">
     <div class="col-md-12">
         <h4 align="center">{{client}} Projects</h4>
-        <p align="center" ng-repeat="job in clientJobList.jobs track by $id($index)">
-            <a href="#/clients/{{client}}/projects/{{job.number}}">{{job.number}} - {{job.title}}</a></p>
+
+        <div class="well" ng-repeat="job in clientJobList.jobs track by $id($index)">
+            <a href="#/clients/{{client}}/projects/{{job.number}}">
+                <button class="btn btn-primary pull-right">View Project</button>
+            </a>
+
+            <p>{{job.number}} - {{job.title}}</p>
+        </div>
+
     </div>
 </div>

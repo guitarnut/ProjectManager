@@ -44,6 +44,7 @@ projectsApp.controller('ClientDataCtrl', function ClientDataCtrl($scope, $routeP
             if (d[i].get('data')['name'] === clientId) {
                 //Store the current list of jobs in a separate object
                 $scope.clientJobList.jobs = d[i].get('data').clientJobs;
+                $scope.clientData.header = d[i].get('data').header;
             }
         }
 

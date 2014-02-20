@@ -41,7 +41,7 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
     $scope.link = {};
     $scope.swf = {};
     $scope.download = {};
-    $scope.video = {};
+    //$scope.video = {};
 
     function loadClients() {
         apigeeDataManager.load('clients', clientsLoaded);
@@ -81,7 +81,7 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
     }
 
     function deleteComplete() {
-
+        alert('Job deleted');
     }
 
     $scope.saveJob = function () {
@@ -91,12 +91,16 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
     }
 
     $scope.deleteJob = function (n) {
-        for (var i = 0; i < $scope.jobEntity.get('data').clientJobs.length; i++) {
-            if ($scope.jobEntity.get('data').clientJobs[i] != null) {
-                if ($scope.jobEntity.get('data').clientJobs[i].number === n) {
-                    $scope.jobEntity.get('data').clientJobs.splice(i, 1);
-                    apigeeDataManager.update('job', 'uuid', $scope.jobEntity.get('uuid'), $scope.jobEntity, deleteComplete);
-                    break;
+        var c = confirm('Are you sure? This cannot be undone.');
+
+        if (c) {
+            for (var i = 0; i < $scope.jobEntity.get('data').clientJobs.length; i++) {
+                if ($scope.jobEntity.get('data').clientJobs[i] != null) {
+                    if ($scope.jobEntity.get('data').clientJobs[i].number === n) {
+                        $scope.jobEntity.get('data').clientJobs.splice(i, 1);
+                        apigeeDataManager.update('job', 'uuid', $scope.jobEntity.get('uuid'), $scope.jobEntity, deleteComplete);
+                        break;
+                    }
                 }
             }
         }
@@ -121,12 +125,24 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
                 $scope.image = {};
                 break;
             case 'download':
+                //Append the base path
+                $scope.download.file = $scope.assetPath.path + $scope.download.file;
                 //Add the asset to the job
                 $scope.job.downloads.push($scope.download);
                 //Add the asset to the UI asset list
                 $scope.assets[$scope.download.file] = $scope.download.file;
                 //Reset the object's values
                 $scope.download = {};
+                break;
+            case 'link':
+                //Add the asset to the job
+                $scope.job.links.push($scope.link);
+                //Add the asset to the UI asset list
+                $scope.assets[$scope.link.href] = $scope.link.href;
+                //Reset the object's values
+                $scope.link = {};
+                break;
+            case 'swf':
                 break;
         }
     }
@@ -140,7 +156,7 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
         //Find a better way to do this... searching each array for the filename
         $scope.job.images = $scope.job.images.filter(removeAsset);
         $scope.job.links = $scope.job.links.filter(removeAsset);
-        $scope.job.videos = $scope.job.videos.filter(removeAsset);
+        //$scope.job.videos = $scope.job.videos.filter(removeAsset);
         $scope.job.swfs = $scope.job.swfs.filter(removeAsset);
         $scope.job.downloads = $scope.job.downloads.filter(removeAsset);
     }

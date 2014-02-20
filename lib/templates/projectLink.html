@@ -1,3 +1,5 @@
-<div><strong>{{link.name}}</strong><br>
-<span ng-bind-html="link.description"></span><br>
-<a ng-href="{{link.href}}" target="_blank">{{link.href}}</a></div>
+<div class="well">
+    <a href="{{link.href}}" target="_blank"><button class="btn btn-primary pull-right">View Link</button></a>
+    <h5>{{link.name}}</h5>
+    <p>{{link.description}}</p>
+</div>
