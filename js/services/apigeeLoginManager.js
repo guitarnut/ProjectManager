@@ -18,7 +18,24 @@ projectsApp.factory('apigeeLoginManager', function ($rootScope) {
                     //Take second callback for failure?
                     f();
                 } else {
-                    $rootScope.loggedIn = true;
+                    f();
+                }
+            });
+        }
+    }
+
+    function adminLogin(u, p, f) {
+        //Check admin status
+        if($rootScope.admin) {
+            //Run the callback if already logged in as admin
+            f();
+        } else {
+            $rootScope.client.login(u, p, function (e, r) {
+                if (e) {
+                    //Take second callback for failure?
+                    f();
+                } else {
+                    $rootScope.admin = true;
                     f();
                 }
             });
@@ -26,7 +43,8 @@ projectsApp.factory('apigeeLoginManager', function ($rootScope) {
     }
 
     return {
-        login: login
+        login: login,
+        admin: adminLogin
     }
 
 });

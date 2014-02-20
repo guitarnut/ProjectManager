@@ -1,4 +1,7 @@
-<div><strong>{{job.number}} - {{job.title}}</strong><br>
-<span class="details">Manager: {{job.manager}}, Designer: {{job.designer}}</span>
-<p ng-bind-html="job.description"></p>
+<div class="col-md-12">
+    <h4 align="center">{{job.number}} - {{job.title}}</h4>
+
+    <p align="center" ng-if="job.description">{{job.description}}</p>
+
+    <p align="center" ng-if="(job.manager)&&(job.designer)">Manager: {{job.manager}}<br>Designer: {{job.designer}}</p>
 </div>

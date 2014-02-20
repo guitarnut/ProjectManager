@@ -3,6 +3,10 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
 
     var deleteThis;
 
+    /* ----------------------------------------------- */
+    /* DATA */
+    /* ----------------------------------------------- */
+
     //Sets the header image
     $scope.clientData = {
         header: 'starz.jpg'
@@ -43,6 +47,35 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
     $scope.download = {};
     //$scope.video = {};
 
+    /* ----------------------------------------------- */
+    /* LOAD CLIENT'S JOBS WHEN CHOSEN FROM SELECT MENU */
+    /* ----------------------------------------------- */
+
+    $scope.loadClient = function () {
+        //This should happen up front and be stored in a singleton...
+        apigeeDataManager.load('jobs', jobsLoaded);
+        //$scope.ready = true;
+    };
+
+    //Find the job object matching the selected client
+    function jobsLoaded(d) {
+        //Match the data to the client
+        for (var i = 0; i < d.length; i++) {
+            if (d[i].get('data')['name'] === $scope.client.name) {
+                $scope.jobEntity = d[i];
+                //Store the current list of jobs in a separate object
+                $scope.clientJobList.jobs = $scope.jobEntity.get('data').clientJobs;
+                $scope.ready = true;
+            }
+        }
+
+        $scope.$apply();
+    }
+
+    /* ----------------------------------------------- */
+    /* LOAD CLIENT LIST FOR SELECT MENU */
+    /* ----------------------------------------------- */
+
     function loadClients() {
         apigeeDataManager.load('clients', clientsLoaded);
     }
@@ -61,30 +94,20 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
 
     }
 
-    //Find the job object matching the selected client
-    function jobsLoaded(d) {
-        //Match the data to the client
-        for (var i = 0; i < d.length; i++) {
-            if (d[i].get('data')['name'] === $scope.client.name) {
-                $scope.jobEntity = d[i];
-                //Store the current list of jobs in a separate object
-                $scope.clientJobList.jobs = $scope.jobEntity.get('data').clientJobs;
-                $scope.ready = true;
-            }
-        }
-
-        $scope.$apply();
-    }
-
-    function saveComplete() {
-        $scope.reset();
-    }
-
-    function deleteComplete() {
-        alert('Job deleted');
-    }
+    /* ----------------------------------------------- */
+    /* SAVE, DELETE, AND EDIT JOBS */
+    /* ----------------------------------------------- */
 
     $scope.saveJob = function () {
+        //Check to see if the job already exists
+        for (var i = 0; i < $scope.jobEntity.get('data').clientJobs.length; i++) {
+            //Match the number and title to an existing object and delete it
+            if (($scope.job.number === $scope.jobEntity.get('data').clientJobs[i].number) &&
+                $scope.job.title === $scope.jobEntity.get('data').clientJobs[i].title) {
+                $scope.jobEntity.get('data').clientJobs.splice(i, 1);
+                break;
+            }
+        }
         //Store our new JSON job data in the entity
         $scope.jobEntity.get('data').clientJobs.push($scope.job);
         apigeeDataManager.update('job', 'uuid', $scope.jobEntity.get('uuid'), $scope.jobEntity, saveComplete);
@@ -106,11 +129,24 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
         }
     }
 
-    $scope.loadClient = function () {
-        //This should happen up front and be stored in a singleton...
-        apigeeDataManager.load('jobs', jobsLoaded);
-        //$scope.ready = true;
-    };
+    function saveComplete() {
+        $scope.reset();
+    }
+
+    function deleteComplete() {
+        alert('Job deleted');
+    }
+
+    $scope.editJob = function (n, t) {
+        //Search for the job in the current client's job list and populate the current model with its data
+        for (var i = 0; i < $scope.clientJobList.jobs.length; i++) {
+            if (($scope.clientJobList.jobs[i].number === n) && ($scope.clientJobList.jobs[i].title === t)) $scope.job = $scope.clientJobList.jobs[i];
+        }
+    }
+
+    /* ----------------------------------------------- */
+    /* HANDLE JOB CREATION DATA */
+    /* ----------------------------------------------- */
 
     $scope.addAsset = function (asset) {
         switch (asset) {
@@ -143,6 +179,14 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
                 $scope.link = {};
                 break;
             case 'swf':
+                //Append the base path
+                $scope.swf.file = $scope.assetPath.path + $scope.swf.file;
+                //Add the asset to the job
+                $scope.job.swfs.push($scope.swf);
+                //Add the asset to the UI asset list
+                $scope.assets[$scope.swf.file] = $scope.swf.file;
+                //Reset the object's values
+                $scope.swf = {};
                 break;
         }
     }
@@ -173,7 +217,10 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
         $route.reload();
     }
 
+    /* ----------------------------------------------- */
+    /* STARTUP */
+    /* ----------------------------------------------- */
+
     loadClients();
 }
-])
-;
+]);

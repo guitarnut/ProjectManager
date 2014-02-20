@@ -1,14 +1,26 @@
-<div><app-header /></div>
-<p align="center"><button class="topcoat-button" ng-controller="ClientDataCtrl" ng-click="go('#/clients')">Back to Clients</button></p>
-<p align="center">Search projects:<br><input type="search" value="" placeholder="search" class="topcoat-search-input" ng-model="query"></p>
-<div class="topcoat-list">
-  <h3 class="topcoat-list__header">All Projects</h3>
-  <ul class="topcoat-list__container">
-  <div ng-repeat="clientData in jobList.jobs">
-  <h3 align="center"><strong>{{clientData.name}}</strong></h3>
-    <li class="topcoat-list__item rowHighlight" ng-repeat="job in clientData.clientJobs | filter:query">
-      <project-job />
-    </li>
-  </div>
-  </ul>
+<div>
+    <app-header/>
 </div>
+
+<div class="row">
+    <div class="col-md-12"><h4>Master Project List</h4></div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="search">Search</label>
+            <input id="search" ng-model="query" placeholder="Search" class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row" ng-repeat="client in data.clients">
+    <div class="col-md-12">
+        <div class="well well-small"><h4>{{client.name}}</h4></div>
+    </div>
+    <div class="col-md-4" ng-repeat="job in client.jobs | filter:query">
+        <div class="well well-small"><project-job></project-job></div>
+    </div>
+</div>
+

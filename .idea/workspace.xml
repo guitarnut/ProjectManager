@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProjectAdminCtrl.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/controllers/ProjectAdminCtrl.js">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="65" selection-start="2563" selection-end="2563" vertical-scroll-proportion="0.35732648" vertical-offset="903" max-vertical-offset="2760">
+            <state line="9" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.11568123" vertical-offset="0" max-vertical-offset="1167">
               <folding />
             </state>
           </provider>
@@ -43,28 +43,34 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/lib/templates/addClient.html" />
-        <option value="$PROJECT_DIR$/css/global.css" />
-        <option value="$PROJECT_DIR$/js/services/apigeeLoginManager.js" />
-        <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/../AngularJS/6mdb Web/js/angular/services/apigeeDataManager.js" />
         <option value="$PROJECT_DIR$/js/services/apigeeDataManager.js" />
-        <option value="$PROJECT_DIR$/js/controllers/ProjectDataCtrl.js" />
         <option value="$PROJECT_DIR$/js/services/dataStorage.js" />
-        <option value="$PROJECT_DIR$/partials/project-detail.html" />
         <option value="$PROJECT_DIR$/lib/uploadify/uploadify.php" />
         <option value="$PROJECT_DIR$/partials/client-list.html" />
         <option value="$PROJECT_DIR$/js/controllers/ClientDataCtrl.js" />
         <option value="$PROJECT_DIR$/lib/templates/projectDownload.html" />
         <option value="$PROJECT_DIR$/lib/templates/projectLink.html" />
-        <option value="$PROJECT_DIR$/js/directives/jobAssets.js" />
         <option value="$PROJECT_DIR$/lib/templates/projectImage.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/partials/addClient.html" />
-        <option value="$PROJECT_DIR$/partials/addProject.html" />
         <option value="$PROJECT_DIR$/partials/client-detail.html" />
         <option value="$PROJECT_DIR$/js/controllers/ClientAdminCtrl.js" />
+        <option value="$PROJECT_DIR$/lib/templates/projectFlash.html" />
+        <option value="$PROJECT_DIR$/js/directives/jobAssets.js" />
+        <option value="$PROJECT_DIR$/partials/project-detail.html" />
+        <option value="$PROJECT_DIR$/partials/addProject.html" />
+        <option value="$PROJECT_DIR$/css/global.css" />
         <option value="$PROJECT_DIR$/js/controllers/ProjectAdminCtrl.js" />
+        <option value="$PROJECT_DIR$/partials/projects-list.html" />
+        <option value="$PROJECT_DIR$/lib/templates/projectDetails.html" />
+        <option value="$PROJECT_DIR$/js/controllers/ProjectDataCtrl.js" />
+        <option value="$PROJECT_DIR$/lib/templates/projectJob.html" />
+        <option value="$PROJECT_DIR$/js/app.js" />
+        <option value="$PROJECT_DIR$/partials/login.html" />
+        <option value="$PROJECT_DIR$/js/services/apigeeLoginManager.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/controllers/LoginCtrl.js" />
       </list>
     </option>
   </component>
@@ -193,6 +199,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectManager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="directives" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -225,7 +249,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="content" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -260,10 +284,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="charter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -278,10 +298,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/js/services" />
+      <recent name="$PROJECT_DIR$/partials" />
       <recent name="$PROJECT_DIR$/js/controllers" />
+      <recent name="$PROJECT_DIR$/js/services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/lib/uploadify" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/partials" />
@@ -337,7 +359,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="50" width="1777" height="1285" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -345,7 +367,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983872" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22363113" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22363113" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -388,10 +410,10 @@
         <state line="54" column="29" selection-start="2112" selection-end="2112" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1410">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1392924853000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392924853000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392924853000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1392924853000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1392938273000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392938273000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392938273000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1392938273000" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -438,24 +460,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/templates/projectDetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1162" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="12" selection-start="368" selection-end="368" vertical-scroll-proportion="0.37435457" vertical-offset="0" max-vertical-offset="1162" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/templates/appHeader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="65" selection-start="65" selection-end="65" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/clients.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="5" selection-start="122" selection-end="122" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="600" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/templates/client.html">
@@ -473,24 +480,9 @@
         <state line="10" column="35" selection-start="242" selection-end="242" vertical-scroll-proportion="0.12254902" vertical-offset="0" max-vertical-offset="1224" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/services/apigeeLoginManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="731" selection-end="731" vertical-scroll-proportion="0.37468776" vertical-offset="0" max-vertical-offset="1201" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1234" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/charter.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="465" selection-end="465" vertical-scroll-proportion="0.1875" vertical-offset="0" max-vertical-offset="1200" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/content/_blankjob.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="17" selection-start="585" selection-end="585" vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="870" />
       </provider>
     </entry>
     <entry file="file:///Volumes/client_sites/review/projects/content/clients.json">
@@ -518,11 +510,6 @@
         <state line="20" column="3" selection-start="445" selection-end="445" vertical-scroll-proportion="0.2437043" vertical-offset="0" max-vertical-offset="1231" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="47" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.41457286" vertical-offset="0" max-vertical-offset="1194" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/services/apigeeDataManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="44" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.56532663" vertical-offset="0" max-vertical-offset="1410" />
@@ -531,11 +518,6 @@
     <entry file="file://$PROJECT_DIR$/js/services/dataStorage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="1350" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/project-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="12" selection-start="1141" selection-end="1141" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="750" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/templates/projectLink.html">
@@ -552,26 +534,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/directives/jobAssets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="16" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1155">
-          <folding>
-            <marker date="1392923666000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1392923666000" expanded="true" signature="-1:-1" placeholder="{&quot;restrict&quot;: 'E'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/templates/projectImage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="293" selection-end="293" vertical-scroll-proportion="0.07964602" vertical-offset="0" max-vertical-offset="1130">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/client-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="6" selection-start="367" selection-end="367" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="300">
           <folding />
         </state>
       </provider>
@@ -580,40 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="26" selection-start="103" selection-end="103" vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="780">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/client-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="14" selection-start="447" selection-end="447" vertical-scroll-proportion="0.17060368" vertical-offset="0" max-vertical-offset="1143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/projects-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="25" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partials/addProject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="62" selection-start="7995" selection-end="7995" vertical-scroll-proportion="0.45575222" vertical-offset="2035" max-vertical-offset="3180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="38" selection-start="1832" selection-end="1832" vertical-scroll-proportion="0.10761155" vertical-offset="492" max-vertical-offset="1635">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1392924853000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392924853000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1392924853000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1392924853000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,16 +562,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/ProjectDataCtrl.js">
+    <entry file="file://$PROJECT_DIR$/partials/client-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="33" selection-start="787" selection-end="787" vertical-scroll-proportion="0.33419022" vertical-offset="0" max-vertical-offset="1167">
+        <state line="13" column="14" selection-start="447" selection-end="447" vertical-scroll-proportion="0.17060368" vertical-offset="0" max-vertical-offset="1143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/client-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="6" selection-start="367" selection-end="367" vertical-scroll-proportion="0.18372704" vertical-offset="0" max-vertical-offset="1143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/templates/projectFlash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="45" selection-start="721" selection-end="721" vertical-scroll-proportion="0.15748031" vertical-offset="0" max-vertical-offset="1143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/directives/jobAssets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="49" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.73264784" vertical-offset="0" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/addProject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="55" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.50442475" vertical-offset="0" max-vertical-offset="3315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="1" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1290">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/templates/projectDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="29" selection-start="113" selection-end="113" vertical-scroll-proportion="0.03937008" vertical-offset="0" max-vertical-offset="1143">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/ProjectAdminCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="65" selection-start="2563" selection-end="2563" vertical-scroll-proportion="0.35732648" vertical-offset="903" max-vertical-offset="2760">
+        <state line="87" column="9" selection-start="2765" selection-end="2765" vertical-scroll-proportion="0.065731816" vertical-offset="1230" max-vertical-offset="3465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/templates/projectJob.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="279" selection-end="279" vertical-scroll-proportion="0.052493438" vertical-offset="0" max-vertical-offset="1143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/projects-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="693" selection-end="693" vertical-scroll-proportion="0.34120736" vertical-offset="0" max-vertical-offset="1143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/ProjectDataCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="5" selection-start="992" selection-end="992" vertical-scroll-proportion="0.4755784" vertical-offset="0" max-vertical-offset="1167">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/project-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="507" selection-end="507" vertical-scroll-proportion="0.2624672" vertical-offset="0" max-vertical-offset="1143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services/apigeeLoginManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="3" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/LoginCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="695" selection-end="695" vertical-scroll-proportion="0.35989717" vertical-offset="0" max-vertical-offset="1167">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partials/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="32" selection-start="402" selection-end="402" vertical-scroll-proportion="0.2624672" vertical-offset="0" max-vertical-offset="1143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.19947506" vertical-offset="477" max-vertical-offset="1665">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1392938273000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392938273000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1392938273000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1392938273000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="270" selection-end="270" vertical-scroll-proportion="0.11568123" vertical-offset="0" max-vertical-offset="1167">
           <folding />
         </state>
       </provider>

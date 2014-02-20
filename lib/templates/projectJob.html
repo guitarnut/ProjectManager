@@ -1,5 +1,5 @@
 <div>
-<strong>{{job.number}} - {{job.title}}</strong><br>
-<span class="details">Manager: {{job.manager}}, Designer: {{job.designer}}</span><br>
-<button class="topcoat-button viewButton" ng-click="open('#clients/'+clientData.id+'/projects/'+job.number)">View</button>
+<p><strong>{{job.number}}<br>{{job.title}}</strong><br>
+    <span class="details">Manager: {{job.manager}}, Designer: {{job.designer}}</span></p>
+<button class="btn btn-primary btn-small" ng-click="open('#clients/'+client.name+'/projects/'+job.number)">View</button>
 </div>

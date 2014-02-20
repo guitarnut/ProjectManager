@@ -26,7 +26,10 @@ projectsApp.directive('projectDetails', function() {
 	return {
 		restrict: 'E',
 		templateUrl: 'lib/templates/projectDetails.html',
-		replace: true
+		replace: true,
+        scope: {
+            job: '=job'
+        }
 	}
 });
 
@@ -67,6 +70,9 @@ projectsApp.directive('projectFlash', function() {
 	return {
 		restrict: 'E',
 		templateUrl: 'lib/templates/projectFlash.html',
-		replace: true
+		replace: true,
+        scope: {
+            flash: '=flash'
+        }
 	}
 });

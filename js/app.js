@@ -6,7 +6,9 @@ var projectsApp = angular.module('projectsApp', [
 
 projectsApp.run(['$rootScope', 'apigeeLoginManager', function ($rootScope, apigeeLoginManager) {
     $rootScope.loggedIn = false;
-    apigeeLoginManager.login('admin', 'Starzdev1', function() {
+    $rootScope.admin = false;
+
+    apigeeLoginManager.login('guest', 'Guest1000', function() {
         $rootScope.loggedIn = true;
     })
 }]);
@@ -41,6 +43,10 @@ projectsApp.config(['$routeProvider',
             when('/clients/:clientId/projects/:projectId', {
                 templateUrl: 'partials/project-detail.html',
                 controller: 'ClientDataCtrl'
+            }).
+            when('/login', {
+                templateUrl: 'partials/login.html',
+                controller: 'LoginCtrl'
             }).
             otherwise({
                 redirectTo: '/clients'

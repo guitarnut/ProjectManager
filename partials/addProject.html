@@ -4,19 +4,26 @@
 <div class="row">
     <div class="col-md-12">
         <h4>Manage Projects</h4>
-
-        <div class="form-group" ng-if="ready === false">
+    </div>
+</div>
+<div class="row" ng-if="ready === false">
+    <div class="col-md-8">
+        <div class="form-group">
             <label for="client">Select client</label>
             <select id="client" ng-change="loadClient()" ng-model="client.name" class="form-control">
                 <option ng-repeat="client in clientList" value="{{client.name}}" ng-blur="loadClient()">{{client.name}}</option>
-            </select> <a href="#/addclient">Add Client</a>
+            </select>
         </div>
-
     </div>
-</div><!-- Job fields -->
+    <div class="col-md-4"><p>Please review the instructions on how to add a client if what you need is not in the dropdown menu.</p>
+        <a href="#/addclient"><button class="btn btn-primary">ADD CLIENT</button>
+    </a></div>
+</div>
+
+</div></div><!-- Job fields -->
 <div ng-if="preview === false">
     <div class="row" ng-if="ready === true">
-        <div class="col-md-12"><h5>Create Job for {{client.name}}</h5></div>
+        <div class="col-md-12"><h5>{{client.name}}</h5></div>
     </div>
     <div ng-if="ready === true">
         <div class="row">
@@ -58,7 +65,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label for="path">Assets Path:</label>
+                    <label for="path">Asset Path:</label>
                     <input id="path" placeholder="http://devreview/projects/{{jobEntity.get('data').id}}/" class="form-control" ng-model="assetPath.path" ng-init="assetPath.path = 'http://devreview/projects/assets/'+jobEntity.get('data').id+'/'">
                 </div>
                 <div class="form-group">
@@ -167,13 +174,9 @@
     </div>
 </div><!-- Job preview -->
 <div class="row" ng-if="preview === true">
-    <div class="col-md-12">
-        <h4 align="center">{{job.number}} - {{job.title}}</h4>
 
-        <p align="center ng-if=" job.description">{{job.description}}</p>
+    <project-details job="job"></project-details>
 
-        <p align="center ng-if="(job.manager)&&(job.designer)">Manager: {{job.manager}}<br>Designer: {{job.designer}}</p>
-    </div>
     <div class="col-md-12">
 
         <project-download ng-repeat="download in job.downloads" download="download"></project-download>
@@ -181,6 +184,8 @@
         <project-image ng-repeat="image in job.images" image="image"></project-image>
 
         <project-link ng-repeat="link in job.links" link="link"></project-link>
+
+        <project-flash ng-repeat="flash in job.swfs" flash="flash"></project-flash>
 
     </div>
 </div>
@@ -198,8 +203,12 @@
     <div class="col-md-4" ng-repeat="job in clientJobList.jobs track by $id($index)">
         <div class="well well-small">
             <p>
+
+                <a href="#/clients/{{client.name}}/projects/{{job.number}}" target="_blank">{{job.number}} - {{job.title}}</a>
+                <br>
+                <button class="btn btn-xs btn-warning" ng-click="editJob(job.number, job.title)">EDIT</button>
                 <button class="btn btn-xs btn-danger" ng-click="deleteJob(job.number)">DELETE</button>
-                <small>{{job.number}} - {{job.title}}</small>
+
             </p>
         </div>
     </div>
