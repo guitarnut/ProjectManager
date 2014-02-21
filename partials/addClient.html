@@ -41,7 +41,9 @@
     <div class="col-md-4"><h4>Current Clients</h4>
 
         <div ng-repeat="client in clientList" class="well well-small">
-            <button class="btn btn-small btn-danger pull-right" ng-click="delete(client.uuid, client.name)">Delete</button>
-            <h5>{{client.name}}</h5>
+            <button class="btn btn-xs btn-danger pull-right" ng-click="delete(client.uuid, client.name)">Delete</button>
+            <p>
+                <small><strong>{{client.name}}</strong></small>
+            </p>
         </div>
     </div>

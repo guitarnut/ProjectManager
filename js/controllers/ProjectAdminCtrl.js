@@ -217,6 +217,15 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
         $route.reload();
     }
 
+    //If the user changes or quits in the middle of adding an asset, clear out the model data
+    $scope.clearAssets = function() {
+        $scope.image = {};
+        $scope.link = {};
+        $scope.swf = {};
+        $scope.download = {};
+        //$scope.video = {};
+    }
+
     /* ----------------------------------------------- */
     /* STARTUP */
     /* ----------------------------------------------- */

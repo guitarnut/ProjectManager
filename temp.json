@@ -1,0 +1,134 @@
+{
+    "uuid": "b0b3fc0a-9b19-11e3-abde-dd5da4c6bae5",
+    "type": "jobs",
+    "name": "2014-02-21T17:00:20.766Z",
+    "created": 1393002039232,
+    "modified": 1393002039232,
+    "data": {
+        "id": "starzplay",
+        "name": "STARZ Play",
+        "header": "starzplay.jpg",
+        "imageFolder": "starzplay/",
+        "clientJobs": [
+            {
+                "number": "PLY4120-13-C",
+                "title": "Wake Screen - Black Sails",
+                "description": "This activity is to create a Wake Screen image to promote Black Sails on the kindle fire devices. We should be able to utilize the images created for the store picker ads as a base. We will need to deliver both landscape and portrait images sized to the appropriate specifications. The specs vary per device but some of the sizes are the same. We just want to make sure that we supply the image that will look the best on each device.<br><br>Please see the spec/guideline document in the attachment section.<br><br>The final deliverables are JPEGs, and a PNG of the button which appears to be sized the same size as the JPEG but everything is transparent execept for the button which has the call to action on it.<br><br>Here is more information beyond the attached wake guidelines:<br>Deliverables in PSD format:<br>6 Wake Screen images (horizontal and vertical for Kindle Fire, Kindle Fire HD and Kindle Fire HD 8.9)<br>3 View Special Offers (VSO) images (one each for the three devices)<br><br>Additional style guidelines:<br>Use minimal text , no use of trademark symbols<br>Please include a short and descriptive sentence or a tagline on the ad that entices download <br>Separate wake screen assets are needed for landscape and portrait for each of the 3 devices (6 in total). Note that each device will have slightly different asset sizes for each orientation and separate assets for each device per orientation are needed. See section (3) in the style guide.<br>Use of the swipe 'paddle': Please provide images with the paddle included for initial review. The paddle should include a short call to action, such as 'Download now' or 'Get the App now'.",
+                "manager": "Loren",
+                "designer": "Rick",
+                "delivery": "PLY4120-13-C_Final_Amazon_PSD.zip",
+                "downloads": [
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/PLY4120-13-C_Final_Amazon_PSD.zip",
+                        "name": "PLY4120-13-C_Final_Amazon_PSD.zip"
+                    }
+                ],
+                "images": [
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFire_Gen5_600x1024.jpg",
+                        "width": 600,
+                        "height": 1024,
+                        "description": "Kindle Fire Gen 5 (600x1024)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFire_Gen5_1024x600.jpg",
+                        "width": 1024,
+                        "height": 600,
+                        "description": "Kindle Fire Gen 5 (1024x600)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHD_Gen5_800x1280.jpg",
+                        "width": 800,
+                        "height": 1280,
+                        "description": "Kindle Fire HD Gen 5 (800x1280)"
+                    },
+                    å
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHD_Gen5_1280x800.jpg",
+                        "width": 1280,
+                        "height": 800,
+                        "description": "Kindle Fire HD Gen 5 (1280x800)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHD_8.9_Gen5_1200x1920.jpg",
+                        "width": 1200,
+                        "height": 1920,
+                        "description": "Kindle Fire HD 8.9 Gen 5 (1200x1920)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHD_8.9_Gen5_1920x1200.jpg",
+                        "width": 1920,
+                        "height": 1200,
+                        "description": "Kindle Fire HD 8.9 Gen 5 (1920x1200)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHD_Gen6_800x1280.jpg",
+                        "width": 800,
+                        "height": 1280,
+                        "description": "Kindle Fire HD Gen 6 (800x1280)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHD_Gen6_1280x800.jpg",
+                        "width": 1280,
+                        "height": 800,
+                        "description": "Kindle Fire HD Gen 6 (1280x800)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHDX_8.9_Gen6_1200x1920.jpg",
+                        "width": 1200,
+                        "height": 1920,
+                        "description": "Kindle Fire HDX 8.9 Gen 6 (1200x1920)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHDX_8.9_Gen6_1920x1200.jpg",
+                        "width": 1920,
+                        "height": 1200,
+                        "description": "Kindle Fire HDX 8.9 Gen 6 (1920x1200)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHDX_Gen6_1200x1920.jpg",
+                        "width": 1200,
+                        "height": 1920,
+                        "description": "Kindle Fire HDX Gen 6 (1200x1920)"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/KindleFireHDX_Gen6_1920x1200.jpg",
+                        "width": 1920,
+                        "height": 1200,
+                        "description": "Kindle Fire HDX Gen 6 (1920x1200)"
+                    }
+                ]
+            },
+            {
+                "number": "TEL4076-14",
+                "title": "TEL4076-14 banners",
+                "description": "",
+                "manager": "Terri",
+                "designer": "Hyung",
+                "images": [
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/TEL4076-14-B_627x300.jpg",
+                        "width": 627,
+                        "height": 300,
+                        "description": "627x300"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/TEL4076-14-A_300x250.jpg",
+                        "width": 300,
+                        "height": 250,
+                        "description": "300x250"
+                    },
+                    {
+                        "file": "http://devreview/projects/assets/starzplay/TEL4076-14-A_300x250_v2.jpg",
+                        "width": 300,
+                        "height": 250,
+                        "description": "300x250"
+                    }
+                ]
+            }
+        ]
+    },
+    "metadata": {
+        "path": "/jobs/b0b3fc0a-9b19-11e3-abde-dd5da4c6bae5"
+    }
+}

@@ -19,7 +19,7 @@
     <div class="col-md-12">
         <div class="well well-small"><h4>{{client.name}}</h4></div>
     </div>
-    <div class="col-md-4" ng-repeat="job in client.jobs | filter:query">
+    <div class="col-md-6" ng-repeat="job in client.jobs | filter:query">
         <div class="well well-small"><project-job></project-job></div>
     </div>
 </div>
