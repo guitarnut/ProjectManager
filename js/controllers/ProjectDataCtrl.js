@@ -2,6 +2,11 @@
 
 projectsApp.controller('ProjectDataCtrl', function ProjectDataCtrl($scope, $window, apigeeDataManager) {
 
+    //Sets the header image
+    $scope.clientData = {
+        header: 'starz.jpg'
+    }
+
     $scope.data = {
         clients: []
     }

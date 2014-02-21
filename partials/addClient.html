@@ -8,8 +8,8 @@
 
         <p>The following steps must be taken when adding a new client:</p>
         <ul>
-            <li>Create an asset folder in 'devreview/projects/assets/' for this client's assets</li>
-            <li>Create a header image for this client in 'devreview/projects/content/headers/'</li>
+            <li>Create an asset folder in 'devreview/projectmanager/assets/' for this client's assets</li>
+            <li>Create a header image for this client in 'devreview/projectmanager/content/headers/'</li>
         </ul>
         <div class="form-group">
             <label for="clientName">Client Name</label>
@@ -40,7 +40,7 @@
     </div>
     <div class="col-md-4"><h4>Current Clients</h4>
 
-        <div ng-repeat="client in clientList" class="well well-small">
+        <div ng-repeat="client in clientList | orderBy:client.name" class="well well-small">
             <button class="btn btn-xs btn-danger pull-right" ng-click="delete(client.uuid, client.name)">Delete</button>
             <p>
                 <small><strong>{{client.name}}</strong></small>

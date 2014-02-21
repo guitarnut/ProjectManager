@@ -15,11 +15,11 @@
     </div>
 </div>
 
-<div class="row" ng-repeat="client in data.clients">
+<div class="row" ng-repeat="client in data.clients | orderBy:client.name">
     <div class="col-md-12">
         <div class="well well-small"><h4>{{client.name}}</h4></div>
     </div>
-    <div class="col-md-6" ng-repeat="job in client.jobs | filter:query">
+    <div class="col-md-6" ng-repeat="job in client.jobs | filter:query | orderBy:job.number">
         <div class="well well-small"><project-job></project-job></div>
     </div>
 </div>

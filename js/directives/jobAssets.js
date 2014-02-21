@@ -66,6 +66,17 @@ projectsApp.directive('projectLink', function() {
 	}
 });
 
+projectsApp.directive('projectIframe', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'lib/templates/projectIframe.html',
+        replace: true,
+        scope: {
+            iframe: '=iframe'
+        }
+    }
+});
+
 projectsApp.directive('projectFlash', function() {
 	return {
 		restrict: 'E',

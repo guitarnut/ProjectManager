@@ -1,4 +1,4 @@
-projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManager', 'dataStorage', function ($scope, $route, apigeeDataManager, dataStorage) {
+projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', '$sce', 'apigeeDataManager', 'dataStorage', function ($scope, $route, $sce, apigeeDataManager, dataStorage) {
     //ISSUES:
 
     var deleteThis;
@@ -34,7 +34,8 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
         links: [],
         videos: [],
         swfs: [],
-        downloads: []
+        downloads: [],
+        iframes: []
     };
 
     //Store the base path for assets here
@@ -45,6 +46,7 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
     $scope.link = {};
     $scope.swf = {};
     $scope.download = {};
+    $scope.iframe = {};
     //$scope.video = {};
 
     /* ----------------------------------------------- */
@@ -188,6 +190,16 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
                 //Reset the object's values
                 $scope.swf = {};
                 break;
+            case 'iframe':
+                //Add the asset to the job
+                $scope.job.iframes.push($scope.iframe);
+                //Add the asset to the UI asset list
+                $scope.assets[$scope.iframe.src] = $scope.iframe.src;
+                //Allow the URL using strict contextual escaping service
+                $scope.iframe.src = $sce.trustAsResourceUrl($scope.iframe.src);
+                //Reset the object's values
+                $scope.iframe = {};
+                break;
         }
     }
 
@@ -200,6 +212,7 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
         //Find a better way to do this... searching each array for the filename
         $scope.job.images = $scope.job.images.filter(removeAsset);
         $scope.job.links = $scope.job.links.filter(removeAsset);
+        $scope.job.iframes = $scope.job.iframes.filter(removeAsset);
         //$scope.job.videos = $scope.job.videos.filter(removeAsset);
         $scope.job.swfs = $scope.job.swfs.filter(removeAsset);
         $scope.job.downloads = $scope.job.downloads.filter(removeAsset);
@@ -223,6 +236,7 @@ projectsApp.controller('ProjectAdminCtrl', ['$scope', '$route', 'apigeeDataManag
         $scope.link = {};
         $scope.swf = {};
         $scope.download = {};
+        $scope.iframe = {};
         //$scope.video = {};
     }
 

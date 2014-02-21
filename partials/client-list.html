@@ -5,7 +5,7 @@
     <div class="col-md-12">
         <h2>Clients</h2>
 
-        <div class="well" ng-repeat="client in clientList">
+        <div class="well" ng-repeat="client in clientList | orderBy:client.name">
 
             <a href="#/clients/{{client.name}}"><button class="btn btn-primary pull-right">View Projects</button></a>
             <h5>{{client.name}}</h5>

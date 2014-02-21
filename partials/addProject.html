@@ -73,9 +73,10 @@
                     <option value="image" selected>Image</option>
                     <option value="link">Link</option>
                     <option value="download">Download</option>
+                    <option value="iframe">iFrame</option>
                     <option value="" disabled>SWF</option>
                     <option value="" disabled>Video</option>
-                    <option value="" disabled>iFrame</option>
+
                 </select>
                 </div>
             </div>
@@ -103,6 +104,21 @@
                     <div class="form-group">
                         <label for="link">HREF</label>
                         <input id="link" placeholder="File" class="form-control" ng-model="link.href">
+                    </div>
+                </div>
+
+                <div ng-if="asset === 'iframe'">
+                    <div class="form-group">
+                        <label for="src">Source</label>
+                        <input id="src" placeholder="File" class="form-control" ng-model="iframe.src">
+                    </div>
+                    <div class="form-group">
+                        <label for="frameWidth">Width</label>
+                        <input id="frameWidth" placeholder="File" class="form-control" ng-model="iframe.width">
+                    </div>
+                    <div class="form-group">
+                        <label for="frameHeight">Height</label>
+                        <input id="frameHeight" placeholder="File" class="form-control" ng-model="iframe.height">
                     </div>
                 </div>
 
@@ -183,6 +199,8 @@
 
         <project-download ng-repeat="download in job.downloads" download="download"></project-download>
 
+        <project-iframe ng-repeat="iframe in job.iframes" iframe="iframe"></project-iframe>
+
         <project-image ng-repeat="image in job.images" image="image"></project-image>
 
         <project-link ng-repeat="link in job.links" link="link"></project-link>
@@ -199,10 +217,10 @@
         </p>
     </div>
 </div>
-<div class="row" ng-if="ready === true">
+<div class="row" ng-if="(ready === true)&&(preview === false)">
     <hr>
     <div class="col-md-12"><h2>Current jobs for {{client.name}}</h2></div>
-    <div class="col-md-6" ng-repeat="job in clientJobList.jobs track by $id($index)">
+    <div class="col-md-6" ng-repeat="job in clientJobList.jobs track by $id($index) | orderBy:job.number">
         <div class="well well-small">
             <p><small><a href="#/clients/{{client.name}}/projects/{{job.number}}" target="_blank">{{job.number}} - {{job.title}}</a></small>
                 <br>
